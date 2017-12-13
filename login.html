@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>登陆</title>
+    <meta content="" name="Keywords">
+    <meta content=""
+          name="Description">
+
+    <script type="text/javascript" src="js/browser.js"></script>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="css/basic.css"/>
+    <link rel="stylesheet" type="text/css" href="css/loginNew.css"/>
+    <link rel="stylesheet" href="plugin/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="plugin/bootstrap/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="plugin/bootstrap/css/animate.css"/>
+    <script type="text/javascript" src="plugin/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="plugin/jquery/jquery.validate.js"></script>
+    <script type="text/javascript" src="plugin/jquery/messages_zh.js"></script>
+    <script type="text/javascript" src="plugin/angular/angular.min.js"></script>
+    <script type="text/javascript" src="plugin/angular/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="plugin/angular/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="plugin/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="plugin/easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="js/app_directives.js"></script>
+    <script type="text/javascript" src="js/app_controllers.js"></script>
+    <script type="text/javascript" src="js/app_services.js"></script>
+
+    <!--加载层-->
+    <link rel="stylesheet" href="plugin/layer/skin/layer.css"/>
+    <script type="text/javascript" src="plugin/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="plugin/layer/layer.min.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+</head>
+<body class="body" ng-app="myApp" ng-controller="appController" onkeydown="if(event.keyCode == 13) {checkDown();}" style="margin-left: -32px;">
+<!--<div class="title" ><span  id="title" style="overflow: hidden">润普智能电子卷宗系统</span></div>-->
+<div class="container">
+    <form id="myForm">
+        <div class="login-title">
+            用户登录
+        </div>
+        <div class="content">
+            <div class="login login-name">
+                <div class="img-name"></div>
+                <div class="input"><input type="text"  id="pname" ng-model="param.user_name" class="input-name" placeholder="用户名"></div>
+            </div>
+            <div class="login login-psw">
+                <div class="img-psw"></div>
+                <div class="input"><input type="password"  id="pwd" ng-model="param.user_password" class="input-name" placeholder="密码"></div>
+            </div>
+        </div>
+        <div class="login login-btn"  id="login_a" onclick="checkDown()">
+            登 录
+        </div>
+    </form>
+</div>
+<div style="text-align: center"><p style="color: #616c91 ">版权所有武汉润普网络科技有限公司</p></div>
+<script type="text/javascript" src="js/browser.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <meta content="" name="Keywords">
+    <meta content="" name="Description">
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+    <link rel="stylesheet" href="plugin/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="plugin/bootstrap/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="plugin/bootstrap/css/animate.css"/>
+    <script type="text/javascript" src="plugin/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="js/browser.js"></script>
+    <script type="text/javascript" src="plugin/angular/angular.min.js"></script>
+    <script type="text/javascript" src="plugin/angular/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="plugin/angular/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="plugin/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/app_services.js"></script>
+    <script type="text/javascript" src="js/app_controllers.js"></script>
+
+    <!--加载层-->
+    <link rel="stylesheet" href="plugin/layer/skin/layer.css"/>
+    <script type="text/javascript" src="plugin/layer/layer.min.js"></script>
+
+    <link rel="stylesheet" href="css/mainNew.css"/>
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="appController" class="body">
+<div id="header">
+    <span class="system-name">{{systemName}}</span>
+    <!--新版本菜单-->
+    <div class="left-menu">
+        <div ng-repeat="menu in publicMenuArray">
+            <ul class="memu-item left-item" ><span class="index-icon" src="{{menu.menu_image_ath}}">{{menu.menu_name}}</span>
+                <a ng-show="menu.menu_path "   target="_blank" ng-href="{{'#'+menu.menu_path}}"></a>
+                <a ng-show="!menu.menu_path && isExit_parent(menu,roleMenus)"  target="_blank"></a>
+                <div class="item-son"  ng-show="menu.children">
+                    <div class="parent-title">
+                        <span class="parent-item">{{menu.menu_name}}</span>
+                    </div>
+                    <div ng-repeat="item in menu.children">
+                        <a class="son-item" target="_blank" href="#{{item.menu_path}}">{{item.menu_name}}</a>
+                    </div>
+                </div>
+               <!--<li ng-repeat="item in publicMenuArray" class="memu-item left-item{{}}" ng-click="_selectMenu(item)">-->
+                    <!--<span clas s="dropdown-list">{{item.menu_name}}</span>-->
+                <!--</li>-->
+                <!--</li>-->
+                <span ng-show="!menu.menu_path && isExit_parent(menu,roleMenus)"  target="_blank"></span>
+
+            </ul>
+        </div>
+    </div>
+    <div id="topUserInfo">
+        <div class="dropdown" style="height: 45px">
+            <!--<span class="zh" ng-click="turnZh()"><img src="./img/left_icon10.png"></span>-->
+            <a class="report" href="#/model/system_notice/page.html" target="_blank"><img src="./img/report.png"><i id="noticeNum" ng-show="noticeNum&&noticeNum>0">{{noticeNum}}</i></a>
+            <div class="dropdown-toggle user-text" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span><img src="./img/user.png"></span>
+                <label class=""><span id="main_userName" ng-bind="userInfo.user_name"></span></label>
+                <span class="caret"></span>
+            </div>
+            <a class="login-out"  href="javascript:void(0)" ng-click="logout()"><img src="./img/logout.png"></a>
+            <a class="login-out" target="_blank" href="#" ng-click="productHelp()"><img src="./img/help.png"></a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" style="margin: 0">
+                <li><a href="javascript:void(0) " ng-click="updatePassword()">修改密码</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="main_repassword_div" style="display: none;padding: 20px 0 0 0">
+        <form id="updateLoginPWD">
+            <div class="form-group">
+                <label class="control-label col-sm-4" style="text-align: right">用户名：</label>
+                <span class="control-span col-sm-7" id="main_userName_text" ng-bind="userInfo.user_name"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-4" style="text-align: right">密&nbsp;&nbsp;码：</label>
+                <input class="easyui-validatebox col-sm-7" type="password" validType="length[6,20]"
+                       invalidMessage="用户密码不能少于6个大于20个字符！"
+                       style="height:30px;border:1px solid #ccc;border-radius:3px;padding-left: 5px "
+                       id="main_password">
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-4" style="text-align: right">确认密码：</label>
+                <input class="easyui-validatebox col-sm-7" type="password" validType="equals['#main_password']"
+                       invalidMessage="两次输入密码不匹配"
+                       style="height:30px;border:1px solid #ccc;border-radius:3px;padding-left: 5px" id="r_password">
+            </div>
+            <div class="form-group text-center" style="margin-bottom: 0">
+                <button class="btn btn-success" type="submit" ng-click="_submitForm()"> 确 定</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="menu-bar" ng-show="pageView.ParentMenuID" style="display: none">
+        <div class="detail-crumbs" > 您的当前位置: <em>{{pageView.ParentMenuName}}</em> > <em>{{pageView.MenuName}} </em></div>
+    </div>
+</div>
+
+</body>
+</html>

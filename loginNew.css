@@ -1,0 +1,141 @@
+.title {
+    line-height: 145px;
+    text-align: center;
+    font-size: 36px;
+    color: white;
+    font-weight: bold;
+    position: relative;
+}
+.title img{
+    left: 50px;
+    position: absolute;
+    top: 30px;
+}
+.container {
+    text-align: center;
+    position: relative;
+}
+
+.content {
+    width: 480px;
+    height: 516px;
+    margin: 0 auto;
+    border: 1px solid #1f3ea0;
+    background: rgba(19, 28, 66, 0.4);
+    margin-left: 720px;
+    margin-top: 240px;
+    /*box-shadow: 0 0 3px #08769F, inset 0 0 3px #08769F;*/
+    border-radius: 4px;
+    text-align: center;
+}
+
+.login-title {
+    font-size: 38px;
+    text-align: center;
+    color: #ffffff;
+    font-family: YouYuan;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    line-height: 175px;
+    margin-left: 366px;
+
+}
+
+.login {
+    width: 386px;
+    height: 66px;
+    border-radius: 10px;
+    border: 1px solid #1f3ea0;
+    box-shadow: 0 0 3px #08769F, inset 0 0 3px #08769F;
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+    line-height: 45px;
+    position: relative
+}
+
+.login-name {
+    margin-top: 168px;
+}
+
+.login-psw {
+    margin-top: 36px;
+}
+
+.login-btn {
+    margin-top: 62px;
+    background: #2781cc;
+    border: 0;
+    text-align: center;
+    font-size: 24px;
+    line-height: 55px;
+    color: #ffffff;
+    font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif, "微软雅黑";
+    margin-left: 767px;
+    top: -190px;
+}
+
+.login-btn:hover
+{
+    cursor: default;
+    background: #196cd7;
+}
+
+.img-name {
+    background: url("../img/username.png") no-repeat center;
+    width: 55px;
+    height: 55px
+}
+
+.img-psw {
+    background: url("../img/password.png") no-repeat center;
+    width: 55px;
+    height: 55px
+}
+
+.input {
+    position: absolute;
+    top: 8px;
+    left: 60px;
+}
+
+.input-name {
+    height: 35px;
+    width: 316px;
+    border: 0px;
+    font-size: 20px;
+    background: none;
+    color: white;
+}
+
+.input-psw {
+    height: 35px;
+    width: 316px;
+    border: 0px;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    font-size: 20px
+}
+
+input::-webkit-input-placeholder {
+    color: white;
+}
+
+input:-moz-placeholder {
+    color: white;
+}
+
+input::-moz-placeholder {
+    color: white;
+}
+
+input::-ms-input-placeholder {
+    color: white;
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    color: rgb(0, 0, 0);
+}
+

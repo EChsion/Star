@@ -1,0 +1,152 @@
+.memu{
+	width: 180px;
+	height: 768px;
+	background-color: #2f333f;
+	font-size: 16px;
+	float: left;
+}
+
+.memu ul li a:link,a:visited{
+	color:#999999;
+}
+
+.memu ul li{
+	height: 54px;
+	line-height: 54px;
+	vertical-align:sub;
+}
+.memu ul li img{
+	margin-bottom: -3px;
+}
+
+.memu ul li span{
+	margin-left: 16px;
+	margin-right:12px;
+}
+
+.memu ul li span img{
+	line-height:60px;	
+}
+.memu ul li a{
+	margin-right: 38px;
+}
+.logo{
+	padding-top: 16px;
+	padding-left: 16px;
+	padding-bottom: 40px;
+}
+
+
+/*右边 */
+.content{
+	float: left;
+}
+
+.content .top{  
+	height: 54px;
+	width:844px;
+	background: white;
+	border-bottom: 1px solid #e1e0e0;
+	line-height: 54px;
+}
+
+.content .top p{
+	display: inline;
+	margin-left: 620px;
+}
+
+.content .top .leave{
+	display: inline;
+	float:right ;
+	margin-right: 40px;
+}
+
+.content .top .leave img{
+	margin-bottom: -3px;
+}
+
+/*内容*/
+.content_d{
+	background-color: #f5f5f5;
+}
+
+/*面包屑*/
+.content_d .breadcrumb{
+	margin-left: 24px;
+	height: 42px;
+	line-height: 42px;
+}
+
+.content .content_d .breadcrumb p .nav:link,.nav:visited{
+	color: #666666;
+}
+
+/*搜索*/
+.content .content_d .inquiry{
+	width:796px ;
+	height: 82px;
+	background: #ffffff;
+	margin-left: 24px;
+	border: 1px solid #dbdbdb;
+	padding-top: 20px;
+	
+}
+
+.content .content_d .inquiry span{
+	margin-left:16px;	
+}
+
+.content .content_d .inquiry span input{
+	width: 178px;
+	height: 28px;
+	border: 1px solid #dbdbdb;
+}
+
+.content .content_d .inquiry button{
+	margin-left: 16px;
+	width: 74px;
+	height: 26px;
+	margin-top: 16px;
+	background: #508aed;
+	border: 0;
+	color: white;
+	border-radius: 4px;
+}
+
+.content .content_d .inquiry .btn{
+	margin-left: 16px;
+	width: 74px;
+	height: 26px;
+	margin-top: 16px;
+	background: #b2b2b2;
+	border: 0;
+	color: white;
+	border-radius: 4px;
+}
+
+.content .content_d  .list{
+	margin-left: 24px;
+	margin-top: 20px;
+	background: white;
+	border: 1px solid #dbdbdb;
+	width:796px ;
+}
+
+.content .content_d  .list form table{
+	width:796px ;
+	height: 478px;
+}
+
+.content .content_d  .list form table caption{
+	height: 54px;
+	line-height: 54px;
+}
+
+.content .content_d  .list form table tr td{
+	height: 50px;
+}
+
+.content .content_d  .list form table tr th{
+	height: 50px;
+	background: #e3edff;
+}
